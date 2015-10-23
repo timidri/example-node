@@ -14,8 +14,8 @@ dcatdemo/example-node:
   PkgInclude:
     - '*'
 
-  PkgExclude:
-    - node_modules/
+  #PkgExclude:
+    #- node_modules/
 
   PreInstall:
     - echo "---Begining PreInstall---"
@@ -32,10 +32,18 @@ dcatdemo/example-node:
 
   PostInstall:
     - echo "Begin PostInstall"
-    - npm install
+    #- npm install
+    - cp node_modules/newrelic/newrelic.js .
+    - sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
+    - sed -i "s|My Application|$NR_APP_NAME|g"
 
   Env:
-    - PORT: 4000
+    - PORT: "4000"
+    - DISTELLI_INSTALLVIEW="templates/notset.json"
+    - NR_INSTALL_SILENT: "TRUE"
+    - NR_APP_NAME: "NodeJS App"
+    - NR_INSTALL_KEY: "fc297ee8baef8312725cc134642ab4fce85a7666"
+    - PORT: "8000"
     
   Exec:
     - /usr/bin/nodejs app.js
