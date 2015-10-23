@@ -41,6 +41,7 @@ dcatdemo/example-node:
   PostInstall:
     - echo "Begin PostInstall"
     - npm install
+    
 
   Env:
     - PORT: 4000
