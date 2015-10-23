@@ -16,8 +16,8 @@ dcatdemo/example-node:
   Build:
     - echo "---Building---"
     - set +e; source /etc/profile; set -e
-    #- nvm install v4.2.1
-    - nvm use v4.2.1
+    - nvm install v4.2.1
+    #- nvm use v4.2.1
     - npm install
     - echo "--Testing--"
     - npm test
