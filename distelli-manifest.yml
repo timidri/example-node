@@ -33,12 +33,16 @@
     - echo "-Installing npm-"
     - sudo apt-get -y install npm
 
+  InstallTemplates:
+    - "views/index.jade"
+
   PostInstall:
     - echo "Begin PostInstall"
     - npm install
-    
+
   Env:
     - PORT: 4000
     
   Exec:
     - /usr/bin/nodejs app.js
+    

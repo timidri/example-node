@@ -6,7 +6,12 @@ html
     title Just a simple Node + Express app
     link(rel='stylesheet', href='./style.css')
   body
+    #message
+      {{#display_msg}}
+        <p>Running in the {{this_env}} environment</p>
+      {{/display_msg}}
     #container
       h1 Just a Simple Node + Express App
       h1 #{date}
       a(href="https://www.distelli.com" target="_blank") Built and Deployed by Distelli
+
