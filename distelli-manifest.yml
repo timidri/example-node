@@ -3,21 +3,10 @@ dcatdemo/example-node:
   # this example assumes the build and deploy servers are:
   # Ubuntu 14.04
 
-  PreBuild:
-    - echo "---Beginning PreBuild---"
-    - echo "--Installing build dependencies--"
-    - echo "-Updating apt-get-"
-    #- sudo apt-get -y update
-    - echo "-Installing nodejs-"
-    #- sudo apt-get -y install nodejs
-    - echo "-Installing npm-"
-    #- sudo apt-get -y install npm
-    
   Build:
     - echo "---Building---"
     - set +e; source /etc/profile; set -e
     - nvm install v4.2.1
-    #- nvm use v4.2.1
     - npm install
     - echo "--Testing--"
     - npm test
@@ -44,11 +33,9 @@ dcatdemo/example-node:
   PostInstall:
     - echo "Begin PostInstall"
     - npm install
-    
 
   Env:
     - PORT: 4000
     
   Exec:
     - /usr/bin/nodejs app.js
-
