@@ -47,4 +47,4 @@ dcatdemo/example-node:
     
   Exec:
     - /usr/bin/nodejs app.js
-    
+
