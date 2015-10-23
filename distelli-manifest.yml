@@ -35,7 +35,7 @@ dcatdemo/example-node:
     #- npm install
     - cp node_modules/newrelic/newrelic.js .
     - sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
-    - sed -i "s|My Application|$NR_APP_NAME|g"
+    - sed -i "s|My Application|$NR_APP_NAME|g" newrelic.js
 
   Env:
     - PORT: "4000"
