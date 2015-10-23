@@ -38,7 +38,7 @@
     - npm install
     
   Env:
-    - PORT: 3000
+    - PORT: 4000
     
   Exec:
     - /usr/bin/nodejs app.js
