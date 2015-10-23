@@ -7,15 +7,18 @@ dcatdemo/example-node:
     - echo "---Beginning PreBuild---"
     - echo "--Installing build dependencies--"
     - echo "-Updating apt-get-"
-    - sudo apt-get -y update
+    #- sudo apt-get -y update
     - echo "-Installing nodejs-"
-    - sudo apt-get -y install nodejs
+    #- sudo apt-get -y install nodejs
     - echo "-Installing npm-"
-    - sudo apt-get -y install npm
+    #- sudo apt-get -y install npm
     
   Build:
     - echo "---Building---"
-    - sudo npm install
+    - set +e; source /etc/profile; set -e
+    #- nvm install v4.2.1
+    - nvm use v4.2.1
+    - npm install
     - echo "--Testing--"
     - npm test
 
