@@ -1,41 +1,38 @@
 bmcgehee/example-node:
   # Distelli Manifest example
-  # this example assumes the build and deploy servers are:
-  # Ubuntu 14.04
 
   Build:
     - echo "---Building---"
     - set +e; source /etc/profile; set -e
     - nvm install v4.2.1
     - npm install
+    - cp node_modules/newrelic/newrelic.js .
+    - sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
+    - sed -i "s|My Application|$NR_APP_NAME|g" newrelic.js
     - echo "--Testing--"
     - npm test
 
   PkgInclude:
     - '*'
 
-  #PkgExclude:
-    #- node_modules/
-
   PreInstall:
     - echo "---Begining PreInstall---"
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
     - sudo apt-get -y update
+    - echo "-Installing nvm pre-requisites-"
+    - sudo apt-get -y install build-essential libssl-dev curl
+    - echo "-Installing nvm-"
+    - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.0/install.sh | bash
+    - set +e; source ~/.nvm/nvm.sh; set -e
     - echo "-Installing nodejs-"
-    - sudo apt-get -y install nodejs
-    #- echo "-Installing npm-"
-    #- sudo apt-get -y install npm
+    - nvm install v4.2.1
 
   InstallTemplates:
     - "views/index.jade"
 
   PostInstall:
     - echo "Begin PostInstall"
-    #- npm install
-    - cp node_modules/newrelic/newrelic.js .
-    - sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
-    - sed -i "s|My Application|$NR_APP_NAME|g" newrelic.js
 
   Env:
     - DISTELLI_INSTALLVIEW: "templates/notset.json"
@@ -45,5 +42,6 @@ bmcgehee/example-node:
     - PORT: "8000"
     
   Exec:
-    - /usr/bin/nodejs app.js
+    - set +e; source ~/.nvm/nvm.sh; set -e
+    - nodejs app.js
     
