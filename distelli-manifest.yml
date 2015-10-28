@@ -38,7 +38,7 @@ bmcgehee/example-node:
     - sed -i "s|My Application|$NR_APP_NAME|g" newrelic.js
 
   Env:
-    - DISTELLI_INSTALLVIEW="templates/notset.json"
+    - DISTELLI_INSTALLVIEW: "templates/notset.json"
     - NR_INSTALL_SILENT: "TRUE"
     - NR_APP_NAME: "SET_THIS_IN_DISTELLI"
     - NR_INSTALL_KEY: "SET_THIS_IN_DISTELLI"
