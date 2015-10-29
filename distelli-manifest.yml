@@ -1,10 +1,13 @@
 bmcgehee/example-node:
   # Distelli Manifest example
 
-  Build:
-    - echo "---Building---"
+  PreBuild:
+    - echo "---Preparing for Build---"
     - set +e; source /etc/profile; set -e
     - nvm install v4.2.1
+    
+  Build:
+    - echo "---Building---"
     - npm install
     - cp node_modules/newrelic/newrelic.js .
     - sed -i "s|license key here|$NR_INSTALL_KEY|g" newrelic.js
@@ -43,5 +46,6 @@ bmcgehee/example-node:
     
   Exec:
     - set +e; source ~/.nvm/nvm.sh; set -e
-    - nodejs app.js
+    - nvm use v4.2.1
+    - node app.js
     
