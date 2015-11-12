@@ -49,5 +49,3 @@ bmcgehee/example-node2:
     - nvm use v4.2.1
     - node app.js
     
-
-
