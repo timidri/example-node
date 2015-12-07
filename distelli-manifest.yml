@@ -7,6 +7,9 @@ bmcgehee2/example-node:
     - nvm install v4.2.1
     
   Build:
+    - echo "---NVM Use---"
+    - set +e; source ~/.nvm/nvm.sh; set -e
+    - nvm use v4.2.1
     - echo "---Building---"
     - npm install
     - cp node_modules/newrelic/newrelic.js .
