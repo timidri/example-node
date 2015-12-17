@@ -17,8 +17,8 @@ bmcgehee/example-node:
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
     - sudo apt-get -y update
-    - echo "-Installing nodejs-""
-    - sudo apt-get -y nodejs
+    - echo "-Installing nodejs-"
+    - sudo apt-get -y install nodejs
 
   PostInstall:
     - echo "Begin PostInstall"
