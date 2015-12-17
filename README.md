@@ -77,29 +77,14 @@ For example if your username is 'YourUserName' your `distelli-manifest.yml` shou
 
 ```
 YourUserName/nodejsbuilddeploy:
-  # Distelli Manifest example
-  # this example assumes the build and deploy servers are:
-  # Ubuntu 14.04
-
-  PreRelease:
-    - echo "---Beginning PreRelease---"
-    - echo "--Installing build dependencies--"
-    - echo "-Updating apt-get-"
-    - sudo apt-get -y update
-    - echo "-Installing nodejs-"
-    - sudo apt-get -y install nodejs
-    - echo "-Installing npm-"
-    - sudo apt-get -y install npm
-    - echo "--Building--"
-    - sudo npm install
+  Build:
+    - echo "---Building---"
+    - npm install
     - echo "--Testing--"
     - npm test
 
   PkgInclude:
     - '*'
-
-  PkgExclude:
-    - node_modules/
 
   PreInstall:
     - echo "---Begining PreInstall---"
@@ -108,18 +93,15 @@ YourUserName/nodejsbuilddeploy:
     - sudo apt-get -y update
     - echo "-Installing nodejs-"
     - sudo apt-get -y install nodejs
-    - echo "-Installing npm-"
-    - sudo apt-get -y install npm
 
   PostInstall:
     - echo "Begin PostInstall"
-    - npm install
-    
+
   Env:
-    - PORT: 3000
-    
+    - PORT: "3000"
+
   Exec:
-    - /usr/bin/nodejs app.js
+    - nodejs app.js
 ```
 
 **Save your change.**
