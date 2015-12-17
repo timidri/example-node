@@ -26,5 +26,5 @@ bmcgehee/example-node:
     - PORT: "3000"
 
   Exec:
-    - node app.js
+    - nodejs app.js
 
