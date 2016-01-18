@@ -1,14 +1,12 @@
 bmcgehee/example-node:
   # Distelli Manifest example
   
-  Env:
-    - PORT: "3000"
-
   PreBuild:
+    # Add any build pre-requisites here
     - echo "---PreBuild---"
-    #- Add any build pre-requisites here
 
   Build:
+    # Enter your build steps here!
     - echo "---Building---"
     - npm install
     - echo "--Testing--"
@@ -17,7 +15,15 @@ bmcgehee/example-node:
   PkgInclude:
     - '*'
 
+  ###Below is deployment phases
+  
+  Env:
+    # Set any environment variables in this section.
+    # These are available during all phases of a deploy.
+    - PORT: "3000"
+
   PreInstall:
+    # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
@@ -31,6 +37,4 @@ bmcgehee/example-node:
   Exec:
     - nodejs app.js
     
-    
-    
-
+  
