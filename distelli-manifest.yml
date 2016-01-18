@@ -11,6 +11,11 @@ bmcgehee/example-node:
     - npm install
     - echo "--Testing--"
     - npm test
+    - docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
+    - docker build --quiet=false -t "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_PATH"
+    - docker tag "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    - docker push "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+ 
 
   PkgInclude:
     - '*'
@@ -25,6 +30,7 @@ bmcgehee/example-node:
   PreInstall:
     # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
+    - sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
     - sudo apt-get -y update
@@ -35,6 +41,7 @@ bmcgehee/example-node:
     - echo "---PostInstall---"
 
   Exec:
-    - nodejs app.js
+    #- nodejs app.js
+    - sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
   
