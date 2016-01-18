@@ -1,6 +1,12 @@
 bmcgehee/example-node:
   # Distelli Manifest example
+  
+  Env:
+    - PORT: "3000"
 
+  PreBuild:
+    - echo "---PreBuild---"
+    #- Add any build pre-requisites here
 
   Build:
     - echo "---Building---"
@@ -12,7 +18,7 @@ bmcgehee/example-node:
     - '*'
 
   PreInstall:
-    - echo "---Begining PreInstall---"
+    - echo "---PreInstall---"
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
     - sudo apt-get -y update
@@ -20,10 +26,7 @@ bmcgehee/example-node:
     - sudo apt-get -y install nodejs
 
   PostInstall:
-    - echo "Begin PostInstall"
-
-  Env:
-    - PORT: "3000"
+    - echo "---PostInstall---"
 
   Exec:
     - nodejs app.js
