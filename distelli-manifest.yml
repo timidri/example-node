@@ -20,7 +20,7 @@ bmcgehee/example-node-demo1:
   PkgInclude:
     - '*'
 
-  ###Below is deployment phases
+  ###Below is deployment phases   
   
   Env:
     # Set any environment variables in this section.
