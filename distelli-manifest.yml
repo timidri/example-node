@@ -44,4 +44,4 @@ bmcgehee/example-node-demo2:
     - nodejs app.js
     #- sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
-      
+    
