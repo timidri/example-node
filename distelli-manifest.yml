@@ -16,7 +16,7 @@ bmcgehee/example-node:
     #- docker tag "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     #- docker push "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
-
+   
   PkgInclude:
     - '*'
 
