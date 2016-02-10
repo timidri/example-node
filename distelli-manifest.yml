@@ -26,7 +26,7 @@ bmcgeheecap1/example-node:
     # Set any environment variables in this section.
     # These are available during all phases of a deploy.
     - PORT: "3000"
-    - DISTELLI_INSTALLVIEW="templates/notset.json"
+    - DISTELLI_INSTALLVIEW: "templates/notset.json"
  
   InstallTemplates:
     - "views/index.jade"
