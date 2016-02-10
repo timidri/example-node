@@ -48,4 +48,7 @@ bmcgeheecap1/example-node:
     - nodejs app.js
     #- sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
+  PostStart:
+    - publicip=$(curl -s ident.me)
+    - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
     
