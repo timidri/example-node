@@ -50,7 +50,7 @@ bmcgeheecap1/example-node:
     - npm test
 
   Exec:
-    - nodejs app.js
+    - node app.js
     #- sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
   PostStart:
