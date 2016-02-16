@@ -23,7 +23,7 @@ bmcgeheecap1/example-node:
   ###Below is deployment phases   
   
   Env:
-    # Set any environment variables in this section.
+    # Set any environment variables in this section.   
     # These are available during all phases of a deploy.
     - PORT: "3000"
     - DISTELLI_INSTALLVIEW: "templates/notset.json"
