@@ -31,7 +31,7 @@ bmcgehee/example-node2:
   InstallTemplates:
     - "views/index.jade"
 
-  PreInstall:
+  PreInstall:  
     # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
     #- sudo docker login --rm=true -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
