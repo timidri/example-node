@@ -6,7 +6,7 @@ bmcgehee/example-node7:
     #- echo "---PreBuild---"
 
   Build:
-    # Enter your build steps here!
+    # Enter your build steps here!  
     - echo "---Building---"
     - npm install 
     - echo "--Testing--"
