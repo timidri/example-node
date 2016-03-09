@@ -1,4 +1,4 @@
-bmcgeheevoicebox/example-node1:
+bmcgehee/example-node7:
   # Distelli Manifest example 
   
   PreBuild:
@@ -40,15 +40,20 @@ bmcgeheevoicebox/example-node1:
     - sudo apt-get -y update
     - echo "-Installing nodejs-"
     - sudo apt-get -y install nodejs npm
+    #- curl --silent --location https://rpm.nodesource.com/setup | sudo bash -
+    #- sudo yum -y install nodejs
+    #- sudo yum -y groupinstall 'Development Tools'
 
   PostInstall:
     - echo "---PostInstall---"
+    #- npm install
+    #- npm test
 
   Exec:
     - nodejs app.js
     #- sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
   PostStart:
-    - publicip=$(curl -s ident.me) || true
+    #- publicip=$(curl -s ident.me)
     - 'echo "You can validate the install by pointing your browser at http://PUBLIC_IP:$PORT"'
     
