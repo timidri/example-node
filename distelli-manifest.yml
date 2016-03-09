@@ -1,4 +1,4 @@
-bmcgeheevoicebox/example-node1:
+bmcgeheevoicebox/example-node:
   # Distelli Manifest example 
   
   PreBuild:
