@@ -40,7 +40,7 @@ bmcgehee/example-node:
     - sudo apt-get -y clean
     - sudo apt-get -y update
     - echo "-Installing nodejs-"
-    - sudo apt-get -y install nodejs npm
+    - sudo apt-get -y install nodejs npm 
 
   PostInstall:
     - echo "---PostInstall---"
