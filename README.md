@@ -18,7 +18,7 @@ If you don't have a server you can use a virtual server. For a simple guide to s
 
 You must install the Distelli agent on the server to facilitate deployments. Instructions on installing the Distelli agent can be found here <a href="http://docs.distelli.com/docs/distelli-agent" target="_blank">Distelli agent reference guide.</a>
 
-Install the agent and return to this document.
+Install the agent and return to this document.   
 
 ### Step 2. Fork and Clone the Repository
 
