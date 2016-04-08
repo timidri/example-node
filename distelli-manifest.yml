@@ -4,6 +4,10 @@ bmcgehee/example-node:
   PreBuild:
     # Add any build pre-requisites here
     #- echo "---PreBuild---"
+    
+  CommitData:
+    - RepoType: Git
+    - RepoPath: .
 
   Build:
     # Enter your build steps here!  
