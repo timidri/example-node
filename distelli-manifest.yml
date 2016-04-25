@@ -61,7 +61,7 @@ bmcgehee/example-node:
     - publicip=$(curl -s ident.me) || true
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
     
-    
+        
     
 
 
