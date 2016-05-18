@@ -16,7 +16,7 @@ bmcgehee/example-node:
     #- echo "DD_REPO - $DISTELLI_DOCKER_REPO"
     
     # Enter your build steps here!  
-    - echo "---Building---"
+    - echo "---Building---"   
     - npm install 
     - echo "--Testing--"
     - npm test
