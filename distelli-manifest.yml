@@ -15,6 +15,9 @@ bmcgehee/example-node:
     - echo "DD_ENDPOINT - $DISTELLI_DOCKER_ENDPOINT"
     - echo "DD_REPO - $DISTELLI_DOCKER_REPO"
     
+    - sudo docker version
+    - docker version
+    
     # Enter your build steps here!  
     - echo "---Building---"   
     - npm install 
