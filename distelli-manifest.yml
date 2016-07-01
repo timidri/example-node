@@ -71,7 +71,7 @@ bmcgehee/example-node:
     - sudo docker version
     - sudo docker help run
     - echo "sudo docker run $DISTELLI_DOCKER_PORTS --rm=true $DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
-    - sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    - sudo docker run $DISTELLI_DOCKER_PORTS --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
   PostStart:
     - publicip=$(curl -s ident.me) || true
