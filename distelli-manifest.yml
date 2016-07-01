@@ -10,13 +10,12 @@ bmcgehee/example-node:
     #- RepoPath: .
 
   Build:
-    - echo "DD_USERNAME - $DISTELLI_DOCKER_USERNAME"
-    - echo "DD_EMAIL - $DISTELLI_DOCKER_EMAIL"
-    - echo "DD_ENDPOINT - $DISTELLI_DOCKER_ENDPOINT"
-    - echo "DD_REPO - $DISTELLI_DOCKER_REPO"
+    #- echo "DD_USERNAME - $DISTELLI_DOCKER_USERNAME"
+    #- echo "DD_EMAIL - $DISTELLI_DOCKER_EMAIL"
+    #- echo "DD_ENDPOINT - $DISTELLI_DOCKER_ENDPOINT"
+    #- echo "DD_REPO - $DISTELLI_DOCKER_REPO"
     
     - ps ax | grep docker
-    #- sudo docker version
     - docker version
     
     # Enter your build steps here!  
@@ -24,13 +23,13 @@ bmcgehee/example-node:
     - npm install 
     - echo "--Testing--"
     - npm test
-    - echo "docker login -u $DISTELLI_DOCKER_USERNAME -p $DISTELLI_DOCKER_PW -e $DISTELLI_DOCKER_EMAIL $DISTELLI_DOCKER_ENDPOINT"
+    #- echo "docker login -u $DISTELLI_DOCKER_USERNAME -p $DISTELLI_DOCKER_PW -e $DISTELLI_DOCKER_EMAIL $DISTELLI_DOCKER_ENDPOINT"
     - docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" $DISTELLI_DOCKER_ENDPOINT
-    - echo "docker build --quiet=false -t $DISTELLI_DOCKER_REPO $DISTELLI_DOCKER_PATH"
+    #- echo "docker build --quiet=false -t $DISTELLI_DOCKER_REPO $DISTELLI_DOCKER_PATH"
     - docker build --quiet=false -t "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_PATH"
-    - echo "docker tag $DISTELLI_DOCKER_REPO $DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    #- echo "docker tag $DISTELLI_DOCKER_REPO $DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     - docker tag "$DISTELLI_DOCKER_REPO" "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
-    - echo "docker push $DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
+    #- echo "docker push $DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     - docker push "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
    
   PkgInclude:
@@ -50,7 +49,7 @@ bmcgehee/example-node:
   PreInstall:  
     # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
-    #- sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
+    - sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" $DISTELLI_DOCKER_ENDPOINT
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
     - sudo apt-get -y clean
@@ -63,7 +62,7 @@ bmcgehee/example-node:
 
   Exec:
     #- nodejs app.js
-    - sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
+    #- sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
     - sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
   PostStart:
