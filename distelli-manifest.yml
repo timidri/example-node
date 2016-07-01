@@ -49,6 +49,7 @@ bmcgehee/example-node:
   PreInstall:  
     # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
+    - echo "sudo docker login -u $DISTELLI_DOCKER_USERNAME -p $DISTELLI_DOCKER_PW -e $DISTELLI_DOCKER_EMAIL $DISTELLI_DOCKER_ENDPOINT"
     - sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" $DISTELLI_DOCKER_ENDPOINT
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
@@ -63,6 +64,7 @@ bmcgehee/example-node:
   Exec:
     #- nodejs app.js
     #- sudo docker login -u "$DISTELLI_DOCKER_USERNAME" -p "$DISTELLI_DOCKER_PW" -e "$DISTELLI_DOCKER_EMAIL" "$DISTELLI_DOCKER_ENDPOINT"
+    - echo "sudo docker run $DISTELLI_DOCKER_PORTS --rm=true $DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     - sudo docker run "$DISTELLI_DOCKER_PORTS" --rm=true "$DISTELLI_DOCKER_REPO:$DISTELLI_BUILDNUM"
     
   PostStart:
