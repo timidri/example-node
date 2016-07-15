@@ -42,6 +42,7 @@ bmcgehee/example-node:
  
   PostInstall:
     - echo "---PostInstall---"
+    - exit 1
 
   Exec:
     - nodejs app.js
