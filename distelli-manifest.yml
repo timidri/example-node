@@ -15,6 +15,7 @@ bmcgehee/example-node:
 
     - echo "----nodejs----"
     - nodejs --version || true
+    - node --version || true
     - echo "----npm----"
     - npm --version || true
     - echo "----nvm----"
@@ -28,6 +29,7 @@ bmcgehee/example-node:
 
     - echo "----nodejs----"
     - nodejs --version || true
+    - node --version || true
     - echo "----npm----"
     - npm --version || true
     - echo "----nvm----"
