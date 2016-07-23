@@ -27,7 +27,7 @@ bmcgehee/example-node7:
     # These are available during all phases of a deploy.
     - PORT: "3000"
     - DISTELLI_INSTALLVIEW: "templates/notset.json"
- 
+  
   InstallTemplates:
     - "views/index.jade"
 
