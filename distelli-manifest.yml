@@ -13,27 +13,11 @@ bmcgehee/example-node:
     # Enter your build steps here!
     # use nvm (node version manager)
 
-    - echo "----nodejs----"
-    - nodejs --version || true
-    - node --version || true
-    - echo "----npm----"
-    - npm --version || true
-    - echo "----nvm----"
-    - nvm --version || true
-
     - source ~/.nvm/nvm.sh
     # Install node v4.4.7
     - nvm install v4.4.7
     # install latest npm version globlaly
     - npm install npm -g   
-
-    - echo "----nodejs----"
-    - nodejs --version || true
-    - node --version || true
-    - echo "----npm----"
-    - npm --version || true
-    - echo "----nvm----"
-    - nvm --version || true
 
     - echo "---Building---"   
     - npm install 
