@@ -86,7 +86,7 @@ bmcgehee/example-node:
     - nodejs app.js 
      
   PostStart:
-    - ./register-dlb.sh
+    - ./register-elb.sh
     - publicip=$(curl -s ident.me) || true
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
 
