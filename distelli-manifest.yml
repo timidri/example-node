@@ -40,7 +40,7 @@ bmcgehee/example-node:
     #- EC2_KEY: "Set in Distelli"
     - AWS_ACCESS_KEY_ID: "Set in Distelli"
     - AWS_SECRET_ACCESS_KEY: "Set in Distelli"
-    - 'PATH: /usr/local/bin:$PATH'
+    - PATH: "/usr/local/bin:$PATH"
  
   InstallTemplates:
     - "views/index.jade"
