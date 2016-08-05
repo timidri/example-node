@@ -36,11 +36,10 @@ bmcgehee/example-node:
     - DISTELLI_INSTALLVIEW: "templates/notset.json"
     - ELBNAME: "bmtest2"
     - REGION: "eu-west-1"
-    #- EC2_ACCESS: "Set in Distelli"
-    #- EC2_KEY: "Set in Distelli"
     - AWS_ACCESS_KEY_ID: "Set in Distelli"
     - AWS_SECRET_ACCESS_KEY: "Set in Distelli"
     - PATH: "/usr/local/bin:$PATH"
+    - test: "Testing"
  
   InstallTemplates:
     - "views/index.jade"
