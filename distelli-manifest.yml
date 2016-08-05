@@ -34,9 +34,13 @@ bmcgehee/example-node:
     # These are available during all phases of a deploy.
     - PORT: "3000"
     - DISTELLI_INSTALLVIEW: "templates/notset.json"
+    - ELBNAME: "bmtest2"
+    - REGION: "eu-west-1"
  
   InstallTemplates:
     - "views/index.jade"
+    - ["deregister-elb.sh","."]
+    - ["register-elb.sh","."]
 
   PreInstall:  
     # Use this section to install any deployment pre-requisites.
@@ -50,11 +54,17 @@ bmcgehee/example-node:
  
   PostInstall:
     - echo "---PostInstall---"
+
+  PreStart:
+    - ./deregister-elb.sh
+    - echo "Deregistered with the ELB. Waiting 1 minute"
+    - sleep 60
  
   Exec:
     - nodejs app.js
     
   PostStart:
+    - ./register-dlb.sh
     - publicip=$(curl -s ident.me) || true
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
 
