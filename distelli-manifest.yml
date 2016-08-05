@@ -60,7 +60,7 @@ bmcgehee/example-node:
     - echo "---PostInstall---"
 
   PreStart:
-    #- echo "$PATH"
+    #- echo "$PATH" 
     #- which aws
     # Check to see if aws cli is installed
     - if which aws >/dev/null; then
