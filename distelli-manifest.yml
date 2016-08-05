@@ -84,7 +84,7 @@ bmcgehee/example-node:
  
   Exec:
     - nodejs app.js
-    
+     
   PostStart:
     - ./register-dlb.sh
     - publicip=$(curl -s ident.me) || true
