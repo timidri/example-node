@@ -83,7 +83,7 @@ bmcgehee/example-node:
     - sleep 60
  
   Exec:
-    - nodejs app.js
+    - nodejs app.js 
      
   PostStart:
     - ./register-dlb.sh
