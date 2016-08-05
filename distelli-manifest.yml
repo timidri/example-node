@@ -36,6 +36,10 @@ bmcgehee/example-node:
     - DISTELLI_INSTALLVIEW: "templates/notset.json"
     - ELBNAME: "bmtest2"
     - REGION: "eu-west-1"
+    - EC2_ACCESS: "Set in Distelli"
+    - EC2_KEY: "Set in Distelli"
+    - AWS_ACCESS_KEY_ID: "Set in Distelli"
+    - AWS_SECRET_ACCESS_KEY: "Set in Distelli"
  
   InstallTemplates:
     - "views/index.jade"
@@ -56,6 +60,10 @@ bmcgehee/example-node:
     - echo "---PostInstall---"
 
   PreStart:
+    # Check to see if aws cli is installed
+    - curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+    - unzip awscli-bundle.zip
+    - sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
     - ./deregister-elb.sh
     - echo "Deregistered with the ELB. Waiting 1 minute"
     - sleep 60
