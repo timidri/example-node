@@ -71,7 +71,7 @@ bmcgehee/example-node:
     -   if which unzip >/dev/null; then
     -     echo "--Unzip exists--"
     -   else
-    -     echo "--Installing unzip--"
+    -     echo "--Installing unzip--"    
     -     sudo apt-get -y install unzip
     -   fi
     -   curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
