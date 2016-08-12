@@ -49,6 +49,7 @@ bmcgehee/example-node:
   PreInstall:  
     # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
+    - echo "This is an addition"
     - echo "--Installing deploy dependencies--"
     - echo "-Updating apt-get-"
     - sudo apt-get -y clean
