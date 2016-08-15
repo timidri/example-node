@@ -79,7 +79,7 @@ bmcgehee/example-node:
     -   unzip awscli-bundle.zip
     -   sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
     - fi
-    - ./deregister-elb.sh
+    #- ./deregister-elb.sh
     - echo "Deregistered with the ELB. Waiting 1 minute"
     - sleep 60
  
@@ -87,7 +87,7 @@ bmcgehee/example-node:
     - nodejs app.js 
      
   PostStart:
-    - ./register-elb.sh
+    #- ./register-elb.sh
     - publicip=$(curl -s ident.me) || true
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
 
