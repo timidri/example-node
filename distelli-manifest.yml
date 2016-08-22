@@ -16,7 +16,7 @@ bmcgehee/example-node:
     - source ~/.nvm/nvm.sh
     # Install node v4.4.7
     - nvm install v4.4.7
-    # install latest npm version globlaly
+    # install latest npm version globlaly 
     - npm install npm -g   
 
     #- echo "---Building---"   
