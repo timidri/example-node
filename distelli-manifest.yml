@@ -24,7 +24,9 @@ bmcgehee/example-node:
     #- echo "--Testing--"
     - npm test
     
-    - cat /testfile.txt
+    - echo "Distelli Build Image?"
+    - echo "====================="
+    - cat /distelli_build_image.info || true
    
   PkgInclude:
     - '*'
