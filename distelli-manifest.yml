@@ -44,7 +44,7 @@ bmcgehee/example-node:
     - AWS_SECRET_ACCESS_KEY: "Set in Distelli"
     - PATH: "/usr/local/bin:$PATH"
     - test: "Testing"
-    - DISTELLI_TMP_FILENAME: "$DISTELLI_APPHOME/DISTELLI.$DISTELLI_BUILDNUM.$DISTELLI_RELVERSION.tmp"
+    - DISTELLI_TMP_FILENAME: "$DISTELLI_INSTALLHOME/DISTELLI.$DISTELLI_BUILDNUM.$DISTELLI_RELVERSION.tmp"
  
   InstallTemplates:
     - "views/index.jade"
@@ -96,10 +96,12 @@ bmcgehee/example-node:
      
   PostStart:
     #- ./register-elb.sh
-    - START=$(cat $DISTELLI_TMP_FILENAME)
-    - END=$(date +%s)
-    - echo $((END-START)) | awk '{printf "%02d:%02d\n",int($1/60), int($1%60)}'
     - publicip=$(curl -s ident.me) || true
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
+    - START=$(cat $DISTELLI_TMP_FILENAME)
+    - rm "$DISTELLI_TMP_FILENAME"
+    - END=$(date +%s)
+    - echo $((END-START)) | awk '{printf " This deploy took %02d minutes and %02d seconds\n",int($1/60), int($1%60)}'
+
 
 
