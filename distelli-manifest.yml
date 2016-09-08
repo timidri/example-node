@@ -54,7 +54,7 @@ bmcgehee/example-node:
   PreInstall:  
     # Use this section to install any deployment pre-requisites.
     - echo "---PreInstall---"
-    - START=$(date +%s);
+    - START=$(date +%s)
     - echo "$START" > "$DISTELLI_TMP_FILENAME"
 
     - echo "This is an addition"
@@ -96,7 +96,8 @@ bmcgehee/example-node:
      
   PostStart:
     #- ./register-elb.sh
-    - END=$(date +%s);
+    - START=$(cat $DISTELLI_TMP_FILENAME)
+    - END=$(date +%s)
     - echo $((END-START)) | awk '{printf "%02d:%02d\n",int($1/60), int($1%60)}'
     - publicip=$(curl -s ident.me) || true
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
