@@ -17,7 +17,7 @@ bmcgehee/example-node:
     # Install node v4.4.7
     - nvm install v4.4.7
     # install latest npm version globlaly 
-    #- npm install npm -g   
+    - npm install npm -g   
 
     #- echo "---Building---"   
     - npm install 
@@ -47,7 +47,7 @@ bmcgehee/example-node:
     - DISTELLI_TMP_FILENAME: "$DISTELLI_INSTALLHOME/DISTELLI.$DISTELLI_BUILDNUM.$DISTELLI_RELVERSION.tmp"
  
   InstallTemplates:
-    - "views/index.jade"
+    - "views/index.pug"
     - ["deregister-elb.sh","."]
     - ["register-elb.sh","."]
 
