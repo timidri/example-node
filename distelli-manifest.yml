@@ -14,8 +14,8 @@ bmcgehee/example-node:
     # use nvm (node version manager)
 
     - source ~/.nvm/nvm.sh
-    # Install node v4.4.7
-    - nvm install v4.4.7
+    # Install node v4.5.0
+    - nvm install v4.5.0
     # install latest npm version globlaly 
     - npm install npm -g   
 
