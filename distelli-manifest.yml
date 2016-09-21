@@ -20,6 +20,7 @@ bmcgehee/example-node:
     - npm install npm -g   
 
     # Test mycujoo issue
+    - sudo apt-get update
     - sudo apt-get install dnsutils
     - nslookup skimdb.npmjs.com
     - dig skimdb.npmjs.com
