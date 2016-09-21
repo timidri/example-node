@@ -26,7 +26,7 @@ bmcgehee/example-node:
     - nslookup skimdb.npmjs.com
     - dig skimdb.npmjs.com
     - ping -c 3 skimdb.npmjs.com
-    - npm config set registry https://skimdb.npmjs.com/registry/
+    - npm config set registry https://skimdb.npmjs.com/registry
 
 
     #- echo "---Building---"   
