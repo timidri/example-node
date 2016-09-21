@@ -20,7 +20,7 @@ bmcgehee/example-node:
     - npm install npm -g   
 
     # Test mycujoo issue
-    - nslookup skimdb.npmjs.com
+    - dig skimdb.npmjs.com
     - ping -c 3 skimdb.npmjs.com
     - npm config set registry https://skimdb.npmjs.com/registry/
 
