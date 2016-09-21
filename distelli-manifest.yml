@@ -21,7 +21,8 @@ bmcgehee/example-node:
 
     # Test mycujoo issue
     - sudo apt-get update
-    - sudo apt-get install dnsutils
+    - sudo apt-get -y install dnsutils
+    - sudo apt-get -y install iputils-ping
     - nslookup skimdb.npmjs.com
     - dig skimdb.npmjs.com
     - ping -c 3 skimdb.npmjs.com
