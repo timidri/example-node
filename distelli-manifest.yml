@@ -19,6 +19,12 @@ bmcgehee/example-node:
     # install latest npm version globlaly 
     - npm install npm -g   
 
+    # Test mycujoo issue
+    - nslookup skimdb.npmjs.com
+    - ping -c 3 skimdb.npmjs.com
+    - npm config set registry https://skimdb.npmjs.com/registry/
+
+
     #- echo "---Building---"   
     - npm install 
     #- echo "--Testing--"
