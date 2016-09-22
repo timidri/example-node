@@ -1,0 +1,385 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/bmcgehee/.nvm/versions/node/v4.4.7/bin/node',
+1 verbose cli   '/home/bmcgehee/.nvm/versions/node/v4.4.7/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose readDependencies loading dependencies from /home/bmcgehee/Applications/example-node/package.json
+5 verbose install where, deps [ '/home/bmcgehee/Applications/example-node',
+5 verbose install   [ 'body-parser', 'express', 'grunt', 'pug', 'nodemon', 'path' ] ]
+6 verbose install where, peers [ '/home/bmcgehee/Applications/example-node', [] ]
+7 verbose installManyTop reading for lifecycle /home/bmcgehee/Applications/example-node/package.json
+8 info preinstall NodeExpress@1.0.1
+9 verbose readDependencies loading dependencies from /home/bmcgehee/Applications/example-node/package.json
+10 silly cache add args [ 'body-parser@^1.13.2', null ]
+11 verbose cache add spec body-parser@^1.13.2
+12 silly cache add args [ 'express@^4.13.1', null ]
+13 verbose cache add spec express@^4.13.1
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'body-parser@^1.13.2',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'body-parser',
+14 silly cache add   rawSpec: '^1.13.2',
+14 silly cache add   spec: '>=1.13.2 <2.0.0',
+14 silly cache add   type: 'range' }
+15 silly addNamed body-parser@>=1.13.2 <2.0.0
+16 verbose addNamed ">=1.13.2 <2.0.0" is a valid semver range for body-parser
+17 silly addNameRange { name: 'body-parser', range: '>=1.13.2 <2.0.0', hasData: false }
+18 silly mapToRegistry name body-parser
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://skimdb.npmjs.com/registry
+21 silly mapToRegistry data Result {
+21 silly mapToRegistry   raw: 'body-parser',
+21 silly mapToRegistry   scope: null,
+21 silly mapToRegistry   name: 'body-parser',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag' }
+22 silly mapToRegistry uri https://skimdb.npmjs.com/registry/body-parser
+23 verbose addNameRange registry:https://skimdb.npmjs.com/registry/body-parser not in flight; fetching
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'express@^4.13.1',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'express',
+24 silly cache add   rawSpec: '^4.13.1',
+24 silly cache add   spec: '>=4.13.1 <5.0.0',
+24 silly cache add   type: 'range' }
+25 silly addNamed express@>=4.13.1 <5.0.0
+26 verbose addNamed ">=4.13.1 <5.0.0" is a valid semver range for express
+27 silly addNameRange { name: 'express', range: '>=4.13.1 <5.0.0', hasData: false }
+28 silly mapToRegistry name express
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://skimdb.npmjs.com/registry
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'express',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   name: 'express',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://skimdb.npmjs.com/registry/express
+33 verbose addNameRange registry:https://skimdb.npmjs.com/registry/express not in flight; fetching
+34 silly cache add args [ 'grunt@^0.4.5', null ]
+35 verbose cache add spec grunt@^0.4.5
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: 'grunt@^0.4.5',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'grunt',
+36 silly cache add   rawSpec: '^0.4.5',
+36 silly cache add   spec: '>=0.4.5 <0.5.0',
+36 silly cache add   type: 'range' }
+37 silly addNamed grunt@>=0.4.5 <0.5.0
+38 verbose addNamed ">=0.4.5 <0.5.0" is a valid semver range for grunt
+39 silly addNameRange { name: 'grunt', range: '>=0.4.5 <0.5.0', hasData: false }
+40 silly mapToRegistry name grunt
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://skimdb.npmjs.com/registry
+43 silly mapToRegistry data Result {
+43 silly mapToRegistry   raw: 'grunt',
+43 silly mapToRegistry   scope: null,
+43 silly mapToRegistry   name: 'grunt',
+43 silly mapToRegistry   rawSpec: '',
+43 silly mapToRegistry   spec: 'latest',
+43 silly mapToRegistry   type: 'tag' }
+44 silly mapToRegistry uri https://skimdb.npmjs.com/registry/grunt
+45 verbose addNameRange registry:https://skimdb.npmjs.com/registry/grunt not in flight; fetching
+46 silly cache add args [ 'pug@^2.0.0-beta6', null ]
+47 verbose cache add spec pug@^2.0.0-beta6
+48 silly cache add parsed spec Result {
+48 silly cache add   raw: 'pug@^2.0.0-beta6',
+48 silly cache add   scope: null,
+48 silly cache add   name: 'pug',
+48 silly cache add   rawSpec: '^2.0.0-beta6',
+48 silly cache add   spec: '>=2.0.0-beta6 <3.0.0',
+48 silly cache add   type: 'range' }
+49 silly addNamed pug@>=2.0.0-beta6 <3.0.0
+50 verbose addNamed ">=2.0.0-beta6 <3.0.0" is a valid semver range for pug
+51 silly addNameRange { name: 'pug', range: '>=2.0.0-beta6 <3.0.0', hasData: false }
+52 silly mapToRegistry name pug
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://skimdb.npmjs.com/registry
+55 silly mapToRegistry data Result {
+55 silly mapToRegistry   raw: 'pug',
+55 silly mapToRegistry   scope: null,
+55 silly mapToRegistry   name: 'pug',
+55 silly mapToRegistry   rawSpec: '',
+55 silly mapToRegistry   spec: 'latest',
+55 silly mapToRegistry   type: 'tag' }
+56 silly mapToRegistry uri https://skimdb.npmjs.com/registry/pug
+57 verbose addNameRange registry:https://skimdb.npmjs.com/registry/pug not in flight; fetching
+58 silly cache add args [ 'nodemon@^1.3.8', null ]
+59 verbose cache add spec nodemon@^1.3.8
+60 silly cache add parsed spec Result {
+60 silly cache add   raw: 'nodemon@^1.3.8',
+60 silly cache add   scope: null,
+60 silly cache add   name: 'nodemon',
+60 silly cache add   rawSpec: '^1.3.8',
+60 silly cache add   spec: '>=1.3.8 <2.0.0',
+60 silly cache add   type: 'range' }
+61 silly addNamed nodemon@>=1.3.8 <2.0.0
+62 verbose addNamed ">=1.3.8 <2.0.0" is a valid semver range for nodemon
+63 silly addNameRange { name: 'nodemon', range: '>=1.3.8 <2.0.0', hasData: false }
+64 silly mapToRegistry name nodemon
+65 silly mapToRegistry using default registry
+66 silly mapToRegistry registry https://skimdb.npmjs.com/registry
+67 silly mapToRegistry data Result {
+67 silly mapToRegistry   raw: 'nodemon',
+67 silly mapToRegistry   scope: null,
+67 silly mapToRegistry   name: 'nodemon',
+67 silly mapToRegistry   rawSpec: '',
+67 silly mapToRegistry   spec: 'latest',
+67 silly mapToRegistry   type: 'tag' }
+68 silly mapToRegistry uri https://skimdb.npmjs.com/registry/nodemon
+69 verbose addNameRange registry:https://skimdb.npmjs.com/registry/nodemon not in flight; fetching
+70 silly cache add args [ 'path@^0.11.14', null ]
+71 verbose cache add spec path@^0.11.14
+72 silly cache add parsed spec Result {
+72 silly cache add   raw: 'path@^0.11.14',
+72 silly cache add   scope: null,
+72 silly cache add   name: 'path',
+72 silly cache add   rawSpec: '^0.11.14',
+72 silly cache add   spec: '>=0.11.14 <0.12.0',
+72 silly cache add   type: 'range' }
+73 silly addNamed path@>=0.11.14 <0.12.0
+74 verbose addNamed ">=0.11.14 <0.12.0" is a valid semver range for path
+75 silly addNameRange { name: 'path', range: '>=0.11.14 <0.12.0', hasData: false }
+76 silly mapToRegistry name path
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://skimdb.npmjs.com/registry
+79 silly mapToRegistry data Result {
+79 silly mapToRegistry   raw: 'path',
+79 silly mapToRegistry   scope: null,
+79 silly mapToRegistry   name: 'path',
+79 silly mapToRegistry   rawSpec: '',
+79 silly mapToRegistry   spec: 'latest',
+79 silly mapToRegistry   type: 'tag' }
+80 silly mapToRegistry uri https://skimdb.npmjs.com/registry/path
+81 verbose addNameRange registry:https://skimdb.npmjs.com/registry/path not in flight; fetching
+82 verbose request uri https://skimdb.npmjs.com/registry/body-parser
+83 verbose request no auth needed
+84 info attempt registry request try #1 at 2:37:24 PM
+85 verbose request id eaf41459b1915d19
+86 http request GET https://skimdb.npmjs.com/registry/body-parser
+87 verbose request uri https://skimdb.npmjs.com/registry/express
+88 verbose request no auth needed
+89 info attempt registry request try #1 at 2:37:24 PM
+90 http request GET https://skimdb.npmjs.com/registry/express
+91 verbose request uri https://skimdb.npmjs.com/registry/grunt
+92 verbose request no auth needed
+93 info attempt registry request try #1 at 2:37:24 PM
+94 http request GET https://skimdb.npmjs.com/registry/grunt
+95 verbose request uri https://skimdb.npmjs.com/registry/pug
+96 verbose request no auth needed
+97 info attempt registry request try #1 at 2:37:24 PM
+98 http request GET https://skimdb.npmjs.com/registry/pug
+99 verbose request uri https://skimdb.npmjs.com/registry/nodemon
+100 verbose request no auth needed
+101 info attempt registry request try #1 at 2:37:24 PM
+102 http request GET https://skimdb.npmjs.com/registry/nodemon
+103 verbose request uri https://skimdb.npmjs.com/registry/path
+104 verbose request no auth needed
+105 info attempt registry request try #1 at 2:37:24 PM
+106 http request GET https://skimdb.npmjs.com/registry/path
+107 http 503 https://skimdb.npmjs.com/registry/body-parser
+108 verbose headers { 'content-type': 'text/html',
+108 verbose headers   'content-length': '104',
+108 verbose headers   expires: 'now',
+108 verbose headers   pragma: 'no-cache',
+108 verbose headers   'cache-control': 'no-cache,no-store' }
+109 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+110 http 503 https://skimdb.npmjs.com/registry/express
+111 verbose headers { 'content-type': 'text/html',
+111 verbose headers   'content-length': '104',
+111 verbose headers   expires: 'now',
+111 verbose headers   pragma: 'no-cache',
+111 verbose headers   'cache-control': 'no-cache,no-store' }
+112 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+113 http 503 https://skimdb.npmjs.com/registry/pug
+114 verbose headers { 'content-type': 'text/html',
+114 verbose headers   'content-length': '104',
+114 verbose headers   expires: 'now',
+114 verbose headers   pragma: 'no-cache',
+114 verbose headers   'cache-control': 'no-cache,no-store' }
+115 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+116 http 503 https://skimdb.npmjs.com/registry/grunt
+117 verbose headers { 'content-type': 'text/html',
+117 verbose headers   'content-length': '104',
+117 verbose headers   expires: 'now',
+117 verbose headers   pragma: 'no-cache',
+117 verbose headers   'cache-control': 'no-cache,no-store' }
+118 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+119 http 503 https://skimdb.npmjs.com/registry/nodemon
+120 verbose headers { 'content-type': 'text/html',
+120 verbose headers   'content-length': '104',
+120 verbose headers   expires: 'now',
+120 verbose headers   pragma: 'no-cache',
+120 verbose headers   'cache-control': 'no-cache,no-store' }
+121 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+122 http 503 https://skimdb.npmjs.com/registry/path
+123 verbose headers { 'content-type': 'text/html',
+123 verbose headers   'content-length': '104',
+123 verbose headers   expires: 'now',
+123 verbose headers   pragma: 'no-cache',
+123 verbose headers   'cache-control': 'no-cache,no-store' }
+124 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+125 info attempt registry request try #2 at 2:37:34 PM
+126 http request GET https://skimdb.npmjs.com/registry/body-parser
+127 info attempt registry request try #2 at 2:37:34 PM
+128 http request GET https://skimdb.npmjs.com/registry/express
+129 info attempt registry request try #2 at 2:37:34 PM
+130 http request GET https://skimdb.npmjs.com/registry/pug
+131 info attempt registry request try #2 at 2:37:34 PM
+132 http request GET https://skimdb.npmjs.com/registry/grunt
+133 info attempt registry request try #2 at 2:37:34 PM
+134 http request GET https://skimdb.npmjs.com/registry/nodemon
+135 info attempt registry request try #2 at 2:37:34 PM
+136 http request GET https://skimdb.npmjs.com/registry/path
+137 http 503 https://skimdb.npmjs.com/registry/body-parser
+138 verbose headers { 'content-type': 'text/html',
+138 verbose headers   'content-length': '104',
+138 verbose headers   expires: 'now',
+138 verbose headers   pragma: 'no-cache',
+138 verbose headers   'cache-control': 'no-cache,no-store' }
+139 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+140 http 503 https://skimdb.npmjs.com/registry/nodemon
+141 verbose headers { 'content-type': 'text/html',
+141 verbose headers   'content-length': '104',
+141 verbose headers   expires: 'now',
+141 verbose headers   pragma: 'no-cache',
+141 verbose headers   'cache-control': 'no-cache,no-store' }
+142 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+143 http 503 https://skimdb.npmjs.com/registry/pug
+144 verbose headers { 'content-type': 'text/html',
+144 verbose headers   'content-length': '104',
+144 verbose headers   expires: 'now',
+144 verbose headers   pragma: 'no-cache',
+144 verbose headers   'cache-control': 'no-cache,no-store' }
+145 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+146 http 503 https://skimdb.npmjs.com/registry/express
+147 verbose headers { 'content-type': 'text/html',
+147 verbose headers   'content-length': '104',
+147 verbose headers   expires: 'now',
+147 verbose headers   pragma: 'no-cache',
+147 verbose headers   'cache-control': 'no-cache,no-store' }
+148 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+149 http 503 https://skimdb.npmjs.com/registry/grunt
+150 verbose headers { 'content-type': 'text/html',
+150 verbose headers   'content-length': '104',
+150 verbose headers   expires: 'now',
+150 verbose headers   pragma: 'no-cache',
+150 verbose headers   'cache-control': 'no-cache,no-store' }
+151 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+152 http 503 https://skimdb.npmjs.com/registry/path
+153 verbose headers { 'content-type': 'text/html',
+153 verbose headers   'content-length': '104',
+153 verbose headers   expires: 'now',
+153 verbose headers   pragma: 'no-cache',
+153 verbose headers   'cache-control': 'no-cache,no-store' }
+154 info retry will retry, error on last attempt: Error: pound_service_unavailable : registry
+155 info attempt registry request try #3 at 2:38:34 PM
+156 http request GET https://skimdb.npmjs.com/registry/body-parser
+157 info attempt registry request try #3 at 2:38:34 PM
+158 http request GET https://skimdb.npmjs.com/registry/nodemon
+159 info attempt registry request try #3 at 2:38:34 PM
+160 http request GET https://skimdb.npmjs.com/registry/pug
+161 info attempt registry request try #3 at 2:38:34 PM
+162 http request GET https://skimdb.npmjs.com/registry/express
+163 info attempt registry request try #3 at 2:38:34 PM
+164 http request GET https://skimdb.npmjs.com/registry/grunt
+165 info attempt registry request try #3 at 2:38:34 PM
+166 http request GET https://skimdb.npmjs.com/registry/path
+167 http 503 https://skimdb.npmjs.com/registry/nodemon
+168 verbose headers { 'content-type': 'text/html',
+168 verbose headers   'content-length': '104',
+168 verbose headers   expires: 'now',
+168 verbose headers   pragma: 'no-cache',
+168 verbose headers   'cache-control': 'no-cache,no-store' }
+169 silly get cb [ 503,
+169 silly get   { 'content-type': 'text/html',
+169 silly get     'content-length': '104',
+169 silly get     expires: 'now',
+169 silly get     pragma: 'no-cache',
+169 silly get     'cache-control': 'no-cache,no-store' } ]
+170 http 503 https://skimdb.npmjs.com/registry/body-parser
+171 verbose headers { 'content-type': 'text/html',
+171 verbose headers   'content-length': '104',
+171 verbose headers   expires: 'now',
+171 verbose headers   pragma: 'no-cache',
+171 verbose headers   'cache-control': 'no-cache,no-store' }
+172 silly get cb [ 503,
+172 silly get   { 'content-type': 'text/html',
+172 silly get     'content-length': '104',
+172 silly get     expires: 'now',
+172 silly get     pragma: 'no-cache',
+172 silly get     'cache-control': 'no-cache,no-store' } ]
+173 http 503 https://skimdb.npmjs.com/registry/pug
+174 verbose headers { 'content-type': 'text/html',
+174 verbose headers   'content-length': '104',
+174 verbose headers   expires: 'now',
+174 verbose headers   pragma: 'no-cache',
+174 verbose headers   'cache-control': 'no-cache,no-store' }
+175 silly get cb [ 503,
+175 silly get   { 'content-type': 'text/html',
+175 silly get     'content-length': '104',
+175 silly get     expires: 'now',
+175 silly get     pragma: 'no-cache',
+175 silly get     'cache-control': 'no-cache,no-store' } ]
+176 http 503 https://skimdb.npmjs.com/registry/path
+177 verbose headers { 'content-type': 'text/html',
+177 verbose headers   'content-length': '104',
+177 verbose headers   expires: 'now',
+177 verbose headers   pragma: 'no-cache',
+177 verbose headers   'cache-control': 'no-cache,no-store' }
+178 silly get cb [ 503,
+178 silly get   { 'content-type': 'text/html',
+178 silly get     'content-length': '104',
+178 silly get     expires: 'now',
+178 silly get     pragma: 'no-cache',
+178 silly get     'cache-control': 'no-cache,no-store' } ]
+179 http 503 https://skimdb.npmjs.com/registry/express
+180 verbose headers { 'content-type': 'text/html',
+180 verbose headers   'content-length': '104',
+180 verbose headers   expires: 'now',
+180 verbose headers   pragma: 'no-cache',
+180 verbose headers   'cache-control': 'no-cache,no-store' }
+181 silly get cb [ 503,
+181 silly get   { 'content-type': 'text/html',
+181 silly get     'content-length': '104',
+181 silly get     expires: 'now',
+181 silly get     pragma: 'no-cache',
+181 silly get     'cache-control': 'no-cache,no-store' } ]
+182 http 503 https://skimdb.npmjs.com/registry/grunt
+183 verbose headers { 'content-type': 'text/html',
+183 verbose headers   'content-length': '104',
+183 verbose headers   expires: 'now',
+183 verbose headers   pragma: 'no-cache',
+183 verbose headers   'cache-control': 'no-cache,no-store' }
+184 silly get cb [ 503,
+184 silly get   { 'content-type': 'text/html',
+184 silly get     'content-length': '104',
+184 silly get     expires: 'now',
+184 silly get     pragma: 'no-cache',
+184 silly get     'cache-control': 'no-cache,no-store' } ]
+185 verbose stack Error: pound_service_unavailable : nodemon
+185 verbose stack     at makeError (/home/bmcgehee/.nvm/versions/node/v4.4.7/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+185 verbose stack     at CachingRegistryClient.<anonymous> (/home/bmcgehee/.nvm/versions/node/v4.4.7/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+185 verbose stack     at Request._callback (/home/bmcgehee/.nvm/versions/node/v4.4.7/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+185 verbose stack     at Request.self.callback (/home/bmcgehee/.nvm/versions/node/v4.4.7/lib/node_modules/npm/node_modules/request/request.js:200:22)
+185 verbose stack     at emitTwo (events.js:87:13)
+185 verbose stack     at Request.emit (events.js:172:7)
+185 verbose stack     at Request.<anonymous> (/home/bmcgehee/.nvm/versions/node/v4.4.7/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+185 verbose stack     at emitOne (events.js:82:20)
+185 verbose stack     at Request.emit (events.js:169:7)
+185 verbose stack     at IncomingMessage.<anonymous> (/home/bmcgehee/.nvm/versions/node/v4.4.7/lib/node_modules/npm/node_modules/request/request.js:988:12)
+186 verbose statusCode 503
+187 verbose pkgid nodemon
+188 verbose cwd /home/bmcgehee/Applications/example-node
+189 error Linux 3.16.0-77-generic
+190 error argv "/home/bmcgehee/.nvm/versions/node/v4.4.7/bin/node" "/home/bmcgehee/.nvm/versions/node/v4.4.7/bin/npm" "install"
+191 error node v4.4.7
+192 error npm  v2.15.8
+193 error code E503
+194 error pound_service_unavailable : nodemon
+195 error If you need help, you may report this error at:
+195 error     <https://github.com/npm/npm/issues>
+196 verbose exit [ 1, true ]

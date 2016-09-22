@@ -23,14 +23,14 @@ bmcgehee/example-node:
     - sudo apt-get update
     - sudo apt-get -y install dnsutils
     - sudo apt-get -y install iputils-ping
-    #- nslookup skimdb.npmjs.com
-    #- dig skimdb.npmjs.com
-    #- ping -c 3 skimdb.npmjs.com
-    #- npm config set registry https://skimdb.npmjs.com/registry
-    - nslookup registry.npmjs.com
-    - dig registry.npmjs.com
-    - ping -c 3 registry.npmjs.com
-    - npm config set registry https://registry.npmjs.org
+    - nslookup skimdb.npmjs.com
+    - dig skimdb.npmjs.com
+    - ping -c 3 skimdb.npmjs.com
+    - npm config set registry https://skimdb.npmjs.com/registry
+    #- nslookup registry.npmjs.com
+    #- dig registry.npmjs.com
+    #- ping -c 3 registry.npmjs.com
+    #- npm config set registry https://registry.npmjs.org
 
 
     #- echo "---Building---"   
