@@ -7,7 +7,7 @@ bmcgehee/example-node:
     
   #CommitData:
     #- RepoType: Git   
-    #- RepoPath: .
+    #- RepoPath: . 
 
   Build:
     # Enter your build steps here!
