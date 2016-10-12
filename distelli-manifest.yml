@@ -86,21 +86,21 @@ bmcgehee/example-node:
     #- echo "$PATH" 
     #- which aws
     # Check to see if aws cli is installed
-    - if which aws >/dev/null; then
-    -   echo "--AWS CLI exists--"
-    - else
-    -   echo "--Installing AWS CLI--"
+    #- if which aws >/dev/null; then
+    #-   echo "--AWS CLI exists--"
+    #- else
+    #-   echo "--Installing AWS CLI--"
     #   Check to see if unzip is installed
-    -   if which unzip >/dev/null; then
-    -     echo "--Unzip exists--"
-    -   else
-    -     echo "--Installing unzip--"
-    -     sudo apt-get -y install unzip
-    -   fi
-    -   curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-    -   unzip awscli-bundle.zip
-    -   sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
-    - fi
+    #-   if which unzip >/dev/null; then
+    #-     echo "--Unzip exists--"
+    #-   else
+    #-     echo "--Installing unzip--"
+    #-     sudo apt-get -y install unzip
+    #-   fi
+    #-   curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+    #-   unzip awscli-bundle.zip
+    #-   sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+    #- fi
     #- ./deregister-elb.sh
     #- echo "Deregistered with the ELB. Waiting 1 minute"
     #- sleep 60
