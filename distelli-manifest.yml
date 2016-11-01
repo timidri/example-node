@@ -8,7 +8,7 @@ bmcgehee/example-node:
   #CommitData:
     #- RepoType: Git   
     #- RepoPath: . 
-
+ 
   Build:
     # Enter your build steps here!
     # use nvm (node version manager)
