@@ -35,7 +35,8 @@ bmcgehee/example-node:
 
     #- echo "---Building---"   
     - npm install 
-    #- echo "--Testing--"
+    - echo "--Testing--"
+    - echo "running npm test"
     - npm test
     
     - echo "Distelli Build Image?"
