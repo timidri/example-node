@@ -13,11 +13,11 @@ bmcgehee/example-node:
     # Enter your build steps here!
     # use nvm (node version manager)
 
-    #- source ~/.nvm/nvm.sh
+    - source ~/.nvm/nvm.sh
     # Install node v4.4.7
-    #- nvm install v4.4.7
+    - nvm install v4.4.7
     # install latest npm version globally 
-    #- npm install npm -g   
+    - npm install npm -g   
 
     # Testing
     #- sudo apt-get update
@@ -34,9 +34,9 @@ bmcgehee/example-node:
 
 
     #- echo "---Building---"   
-    #- npm install 
+    - npm install 
     #- echo "--Testing--"
-    #- npm test
+    - npm test
     
     - echo "Distelli Build Image?"
     - echo "====================="
