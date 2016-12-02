@@ -4,7 +4,8 @@
   "description": "Simple Node and Express sample app.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "spec/test_spec.js"
   },
   "repository": {
     "type": "git",
