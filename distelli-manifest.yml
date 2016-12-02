@@ -4,6 +4,8 @@ bmcgehee/example-node:
   PreBuild:       
     # Add any build pre-requisites here 
     #- echo "---PreBuild---"
+    - echo "Installing NVM"
+    - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
     
   #CommitData:
     #- RepoType: Git   
