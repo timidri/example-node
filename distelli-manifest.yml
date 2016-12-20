@@ -125,7 +125,8 @@ bmcgehee/example-node:
   Start:
     - echo "Testing"
     -    echo "Testing2"
-    -    # Remark
+    #-    # Remark
+    -    '# Remark2'
     -    echo "Testing3"
     - echo "Testing4"
     
