@@ -15,11 +15,11 @@ bmcgehee/example-node:
     # Enter your build steps here!
     # use nvm (node version manager)
 
-    #- source ~/.nvm/nvm.sh
+    - source ~/.nvm/nvm.sh
     # Install node v4.4.7
-    #- nvm install v4.4.7
+    - nvm install v4.4.7
     # install latest npm version globally 
-    #- npm install npm -g   
+    - npm install npm -g   
 
     # Testing
     #- sudo apt-get update
@@ -36,9 +36,9 @@ bmcgehee/example-node:
 
 
     #- echo "---Building---"   
-    #- npm install 
+    - npm install 
     #- echo "--Testing--"
-    #- npm test
+    - npm test
     
     - echo "Distelli Build Image?"
     - echo "====================="
@@ -110,8 +110,8 @@ bmcgehee/example-node:
     #- echo "Deregistered with the ELB. Waiting 1 minute"
     #- sleep 60
  
-  #Exec:
-    #- nodejs app.js 
+  Exec:
+    - nodejs app.js 
      
   PostStart:
     #- ./register-elb.sh
@@ -122,14 +122,7 @@ bmcgehee/example-node:
     - rm "$DISTELLI_TMP_FILENAME"
     - END=$(date +%s)
     - echo $((END-START)) | awk '{printf " This deploy took %02d minutes and %02d seconds\n",int($1/60), int($1%60)}'
-  Start:
-    - echo "Testing"
-    -    echo "Testing2"
-    #-    # Remark
-    -    '# Remark2'
-    -    echo "Testing3"
-    - echo "Testing4"
-    
+     
 
 
 
