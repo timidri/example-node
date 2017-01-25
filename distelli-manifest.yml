@@ -63,9 +63,9 @@ bmcgehee/example-node:
     - DISTELLI_TMP_FILENAME: "$DISTELLI_INSTALLHOME/DISTELLI.$DISTELLI_BUILDNUM.$DISTELLI_RELVERSION.tmp"
  
   InstallTemplates:
-    - "docker-compose.yml"
-    - "bin/startup.sh"
-    #- "views/index.pug"
+    #- "docker-compose.yml"
+    #- "bin/startup.sh"
+    - "views/index.pug"
     #- ["deregister-elb.sh","."]
     #- ["register-elb.sh","."]
 
