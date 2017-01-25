@@ -85,7 +85,8 @@ bmcgehee/example-node:
  
   PostInstall:
     - echo "---PostInstall---"
-    - cat bin/startup.sh
+    #- cat bin/startup.sh
+    - cat views/index.pug
 
   PreStart:
     #- echo "$PATH" 
