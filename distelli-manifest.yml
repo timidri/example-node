@@ -87,6 +87,7 @@ bmcgehee/example-node:
     - echo "---PostInstall---"
     #- cat bin/startup.sh
     - cat views/index.pug
+    - cat node_modules/pug-linker/index.js
 
   PreStart:
     #- echo "$PATH" 
