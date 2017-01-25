@@ -5,19 +5,17 @@ bmcgehee/example-node:
     # Add any build pre-requisites here 
     #- echo "---PreBuild---"
     - echo "Installing NVM"
-    #- curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+    - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
     
-  #CommitData:
-    #- RepoType: Git   
-    #- RepoPath: . 
- 
   Build:
     # Enter your build steps here!
     # use nvm (node version manager)
 
     - source ~/.nvm/nvm.sh
     # Install node v4.4.7
-    - nvm install v4.4.7
+    #- nvm install v4.4.7
+    # Install node v6.9.4
+    - nvm install v6.9.4
     # install latest npm version globally 
     - npm install npm -g   
 
@@ -87,7 +85,7 @@ bmcgehee/example-node:
     - echo "---PostInstall---"
     #- cat bin/startup.sh
     - cat views/index.pug
-    - cat node_modules/pug-linker/index.js
+    #- cat node_modules/pug-linker/index.js
 
   PreStart:
     #- echo "$PATH" 
