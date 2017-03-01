@@ -1,0 +1,12 @@
+{
+  "name": "sweeps-api-proxy-healthcheck-{{env}}",
+  "description": "",
+  "checkIntervalSec": {{checkIntervalSec}},
+  "timeoutSec": {{timeoutSec}},
+  "unhealthyThreshold": {{unhealthyThreshold}},
+  "healthyThreshold": {{healthyThreshold}},
+  "selfLink": "projects/dtss-sweepstakes-dev/global/httpHealthChecks/sweeps-api-proxy-healthcheck-{{env}}",
+  "port": {{healthCheckPort}},
+  "host": null,
+  "requestPath": "{{requestPath}}"
+}  
