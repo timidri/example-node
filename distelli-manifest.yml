@@ -70,23 +70,22 @@ bmcgehee/example-node:
 
   PreInstall:  
     # Use this section to install any deployment pre-requisites.
-    #- echo "---PreInstall---"
-    #- START=$(date +%s)
-    #- echo "$START" > "$DISTELLI_TMP_FILENAME"
+    - echo "---PreInstall---"
+    - START=$(date +%s)
+    - echo "$START" > "$DISTELLI_TMP_FILENAME"
 
-    #- echo "This is an addition"
-    #- echo "--Installing deploy dependencies--"
-    #- echo "-Updating apt-get-"
-    #- sudo apt-get -y clean
-    #- sudo apt-get -y update
-    #- echo "-Installing nodejs-"
-    #- sudo apt-get -y install nodejs 
+    - echo "--Installing deploy dependencies--"
+    - echo "-Updating apt-get-"
+    - sudo apt-get -y clean
+    - sudo apt-get -y update
+    - echo "-Installing nodejs-"
+    - sudo apt-get -y install nodejs 
  
   PostInstall:
     - echo "---PostInstall---"
     #- cat bin/startup.sh
     #- cat views/index.pug
-    - cat conf/compute/httpHealthChecks/01.json
+    #- cat conf/compute/httpHealthChecks/01.json
     #- cat node_modules/pug-linker/index.js
 
   PreStart:
