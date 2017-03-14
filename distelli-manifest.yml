@@ -116,8 +116,8 @@ bmcgehee/example-node:
      
   PostStart:
     #- ./register-elb.sh
-    #- publicip=$(curl -s ident.me) || true
-    - publicip=$(hostname -i)
+    - publicip=$(curl -s ident.me) || true
+    #- publicip=$(hostname -i)
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
     - START=$(cat $DISTELLI_TMP_FILENAME)
     - rm "$DISTELLI_TMP_FILENAME"
