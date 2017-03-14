@@ -3,24 +3,24 @@ bmcgehee/example-node:
   
   PreBuild:       
     # Add any build pre-requisites here 
-    #- echo "---PreBuild---"
-    #- echo "Installing NVM"
-    #- curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+    - echo "---PreBuild---"
+    - echo "Installing NVM"
+    - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
     
   Build:
     # Enter your build steps here!
     # use nvm (node version manager)
 
-    #- source ~/.nvm/nvm.sh
+    - source ~/.nvm/nvm.sh
     # Install node v4.4.7
     #- nvm install v4.4.7
     # Install node v6.9.4
-    #- nvm install v6.9.4
+    - nvm install v6.9.4
     # install latest npm version globally 
-    #- npm install npm -g   
+    - npm install npm -g   
 
     # Testing
-    #- sudo apt-get update
+    - sudo apt-get update
     #- sudo apt-get -y install dnsutils
     #- sudo apt-get -y install iputils-ping
     #- nslookup skimdb.npmjs.com
@@ -33,10 +33,10 @@ bmcgehee/example-node:
     #- npm config set registry https://registry.npmjs.org
 
 
-    #- echo "---Building---"   
-    #- npm install 
-    #- echo "--Testing--"
-    #- npm test
+    - echo "---Building---"   
+    - npm install 
+    - echo "--Testing--"
+    - npm test
     
     #- echo "Distelli Build Image?"
     #- echo "====================="
