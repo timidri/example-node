@@ -123,6 +123,9 @@ bmcgehee/example-node:
     - rm "$DISTELLI_TMP_FILENAME"
     - END=$(date +%s)
     - echo $((END-START)) | awk '{printf " This deploy took %02d minutes and %02d seconds\n",int($1/60), int($1%60)}'
+    - echo "Forcing failure in PostStart"
+    - sleep 120
+    - exit 1
      
 
 
