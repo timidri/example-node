@@ -84,7 +84,10 @@ bmcgehee/example-node:
   PostInstall:
     - echo "---PostInstall---"
     #- cat bin/startup.sh
-    #- cat views/index.pug
+    - echo "cat views/index.pug
+    - cat views/index.pug
+    - echo "ls -l /home/distelli"
+    - echo "cat /home/distelli/index.pug" || true
     #- cat conf/compute/httpHealthChecks/01.json
     #- cat node_modules/pug-linker/index.js
 
@@ -123,9 +126,9 @@ bmcgehee/example-node:
     - rm "$DISTELLI_TMP_FILENAME"
     - END=$(date +%s)
     - echo $((END-START)) | awk '{printf " This deploy took %02d minutes and %02d seconds\n",int($1/60), int($1%60)}'
-    - echo "Forcing failure in PostStart"
-    - sleep 120
-    - exit 1
+    #- echo "Forcing failure in PostStart"
+    #- sleep 120
+    #- exit 1
      
 
 
