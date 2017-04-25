@@ -63,7 +63,7 @@ bmcgehee/example-node:
   InstallTemplates:
     #- "docker-compose.yml"
     #- "bin/startup.sh"
-    - ["views/index.pug","/home/distelli"]
+    - ["views/index.pug","../../../home/distelli"]
     #- conf/compute/httpHealthChecks/01.json
     #- ["deregister-elb.sh","."]
     #- ["register-elb.sh","."]
