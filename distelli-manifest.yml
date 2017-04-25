@@ -84,7 +84,7 @@ bmcgehee/example-node:
   PostInstall:
     - echo "---PostInstall---"
     #- cat bin/startup.sh
-    - echo "cat views/index.pug
+    - echo "cat views/index.pug"
     - cat views/index.pug
     - echo "ls -l /home/distelli"
     - echo "cat /home/distelli/index.pug" || true
