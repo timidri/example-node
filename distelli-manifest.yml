@@ -20,7 +20,7 @@ bmcgehee/example-node:
     - npm install npm -g   
 
     # Testing
-    - sudo apt-get update
+    #- sudo apt-get update
     #- sudo apt-get -y install dnsutils
     #- sudo apt-get -y install iputils-ping
     #- nslookup skimdb.npmjs.com
@@ -76,11 +76,11 @@ bmcgehee/example-node:
     - echo "$START" > "$DISTELLI_TMP_FILENAME"
 
     - echo "--Installing deploy dependencies--"
-    - echo "-Updating apt-get-"
-    - sudo apt-get -y clean
-    - sudo apt-get -y update
-    - echo "-Installing nodejs-"
-    - sudo apt-get -y install nodejs 
+    #- echo "-Updating apt-get-"
+    #- sudo apt-get -y clean
+    #- sudo apt-get -y update
+    #- echo "-Installing nodejs-"
+    #- sudo apt-get -y install nodejs 
  
   PostInstall:
     - echo "---PostInstall---"
