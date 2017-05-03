@@ -1,5 +1,6 @@
 bmcgehee/example-node: 
   # Distelli Manifest example  kkk
+  # TEST
   
   PreBuild:       
     # Add any build pre-requisites here 
