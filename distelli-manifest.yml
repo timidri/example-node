@@ -117,7 +117,9 @@ bmcgehee/example-node:
     #- sleep 60
  
   Exec:
-    - nodejs app.js 
+    - source ~/.nvm/nvm.sh
+    - nvm use v6.9.4
+    - node app.js 
      
   PostStart:
     #- ./register-elb.sh
