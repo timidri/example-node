@@ -1,0 +1,19 @@
+bmcgehee/SimplePythonApp:
+  Env:
+    - PORT: "8005"
+
+  PkgInclude:
+    - 'simpleapp/simpleapp.py'
+
+  PreInstall:
+    - 'echo "Starting PreInstall for SimplePythonApp"'
+    - 'sudo apt-get update'
+    - 'sudo apt-get -y install python-pip'
+    - 'sudo pip install flask'
+
+  PostInstall:
+    - 'echo "Starting PostInstall for SimplePythonApp"'
+
+  Exec:
+    - 'echo "Executing SimplePythonApp"'
+    - "exec python simpleapp/simpleapp.py -p $PORT"
