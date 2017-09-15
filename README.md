@@ -30,7 +30,7 @@ Install the agent and return to this document.
 
 You have forked the repository to your Github account. Good job!
 
-You can view the forked repository in your Github account at:
+You can view the forked repository in your Github account at:    
 
 ```
 https://github.com/YOUR_GITHUB_USERNAME/nodejsbuilddeploy
