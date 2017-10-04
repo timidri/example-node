@@ -2,7 +2,7 @@
 
 This tutorial will get you setup, building, testing, and deploying an application with Distelli in minutes. 
 
-The tutorial assumes you have already:
+The tutorial assumes you have already: 
 * [Created a free Distelli account](https://www.distelli.com/signup)
 * Have a login to, at least, one of the two public repositories.
  - <a href="https://github.com/" target="_blank">https://github.com/</a>
