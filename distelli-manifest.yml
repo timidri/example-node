@@ -87,12 +87,12 @@ bmcgehee/example-node:
     #- sudo apt-get -y install nodejs 
  
   PostInstall:
-    - echo "---PostInstall---"
+    #- echo "---PostInstall---"
     #- cat bin/startup.sh
-    - echo "cat views/index.pug"
-    - cat views/index.pug
-    - echo "ls -l /home/distelli"
-    - echo "cat /home/distelli/index.pug" || true
+    #- echo "cat views/index.pug"
+    #- cat views/index.pug
+    #- echo "ls -l /home/distelli"
+    #- echo "cat /home/distelli/index.pug" || true
     #- cat conf/compute/httpHealthChecks/01.json
     #- cat node_modules/pug-linker/index.js
 
@@ -127,8 +127,9 @@ bmcgehee/example-node:
   PostStart:
     #- ./register-elb.sh
     - publicip=$(curl -s ident.me) || true
-    #- publicip=$(hostname -i)
+    - privateip=$(hostname -i)
     - 'echo "You can validate the install by pointing your browser at http://$publicip:$PORT"'
+    - 'echo "or maybe http://$privateip:$PORT"'
     - START=$(cat $DISTELLI_TMP_FILENAME)
     - rm "$DISTELLI_TMP_FILENAME"
     - END=$(date +%s)
